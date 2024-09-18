@@ -1,13 +1,16 @@
 import { RouterProvider } from "react-router-dom"
-import { route } from "./Routes/Index"
+import { router } from "./Routes/Index"
+import JobsProvider from "./Provider/JobsProvider";
 
 function App() {
 
   return (
     <>
-    <RouterProvider router={route}/>
+      <JobsProvider>
+        <RouterProvider router={router} />
+      </JobsProvider>
     </>
-  )
+  );
 }
 
 export default App
